@@ -1,0 +1,59 @@
+Estrutura                        | Operação              | Complexidade de Tempo | Comentário
+----------------------------------------------------------------------------------------------
+Lista Simplesmente Encadeada    | inserirNoInicio      | O(1)                 | Insere no início, acesso direto ao primeiro nó
+                                | inserirNoFim          | O(n)                 | Percorre toda a lista até o fim
+                                | removerPeloId         | O(n)                 | Percorre para encontrar o nó e remove
+                                | buscarPeloId          | O(n)                 | Percorre até encontrar o nó
+                                | imprimirTodos         | O(n)                 | Percorre toda a lista
+                                | destrutor             | O(n)                 | Apaga todos os nós e elementos
+
+Lista Duplamente Encadeada      | inserirNoInicio       | O(1)                 | Encadeamento duplo facilita inserção rápida
+                                | inserirNoFim          | O(1)                 | Mantendo ponteiro para último nó
+                                | removerPeloId         | O(n)                 | Percorre para localizar o nó e remove
+                                | buscarPeloId          | O(n)                 | Percorre toda a lista
+                                | imprimirTodos         | O(n)                 | Percorre todos os nós
+                                | destrutor             | O(n)                 | Apaga nós e elementos
+
+Lista Duplamente Encadeada Circular| inserirNoInicio    | O(1)                 | Atualiza ponteiros em lista circular
+                                | inserirNoFim          | O(1)                 | Atualiza ponteiros em lista circular
+                                | removerPeloId         | O(n)                 | Percorre para encontrar e remover
+                                | buscarPeloId          | O(n)                 | Percorre até achar
+                                | imprimirTodos         | O(n)                 | Percorre e imprime todos os elementos
+                                | destrutor             | O(n)                 | Apaga todos os nós e elementos
+
+Pilha (adaptador)               | empilhar (push)       | O(1)                 | Usa lista simples ou dupla, insere no início
+                                | desempilhar (pop)     | O(1)                 | Remove do início da lista
+                                | topo (peek)           | O(1)                 | Retorna elemento do início
+                                | imprimir              | O(n)                 | Percorre todos os elementos
+
+Fila (adaptador)                 | enfileirar (enqueue)  | O(1)                 | Insere no fim da lista duplamente encadeada
+                                | desenfileirar (dequeue) | O(1)* (se mantiver ponteiro para início) / O(n) | Remove do início, se lista mantiver ponteiro para início é O(1)
+                                | frente (peek)         | O(1)                 | Retorna elemento do início
+                                | imprimir              | O(n)                 | Percorre todos os elementos
+
+Deque (adaptador)                | inserirNoInicio       | O(1)                 | Insere no início da lista circular
+                                | inserirNoFim          | O(1)                 | Insere no fim da lista circular
+                                | removerDoInicio       | O(1)* (se ponteiro) / O(n) | Remove do início
+                                | removerDoFim          | O(n)                 | Precisa percorrer para encontrar o penúltimo nó
+                                | estaVazia             | O(1)                 | Verifica ponteiro de início
+                                | imprimir              | O(n)                 | Percorre todos os elementos
+
+Árvore Binária de Busca          | inserir               | O(h)                 | h é a altura da árvore; no pior caso O(n) (árvore degenerada)
+                                | buscarPeloId          | O(h)                 | Igual inserção
+                                | removerPeloId         | O(h)                 | Remoção e reorganização da árvore
+                                | emOrdem               | O(n)                 | Percorre todos os nós em ordem
+                                | preOrdem              | O(n)                 | Percorre todos os nós pre ordem
+                                | posOrdem              | O(n)                 | Percorre todos os nós pós ordem
+
+*Nota: O(1)* nas filas e deque para remoção do início depende de manter ponteiro para o nó inicial.
+
+
+Principais decisões:
+
+
+    • Polimorfismo com Elemento como classe base abstrata, assim, define-se uma interface comum para aluno e professor 
+    • Abstração e generalização que permite que as estruturas de dados (listas, pilhas, filas, deque, árvore) armazenem e manipulem ponteiros para Elemento de forma genérica, sem precisar saber se o objeto real é um aluno ou um professor 
+    • Destrutor virtual para evitar vazamentos de memória 
+    • Implementar Pilha, Fila e Deque utilizando composição, ou seja, cada uma dessas classes contém uma instância de uma lista encadeada o que maximiza o reuso de código das classes de lista encadeada. Em vez de reimplementar a lógica de nós, ponteiros e travessia, as classes adaptadoras delegam suas operações à lista subjacente. Isso reduz a duplicação de código
+    • O código em main.cpp interage com todas as estruturas de dados (listas, pilha, fila, deque, árvore) exclusivamente através de seus métodos públicos. Não há acesso direto a membros privados ou protegidos das classes
+    • Utilizar a classe std::string para armazenar o nome em Aluno e Professor, que é uma classe de string da biblioteca padrão C++ que gerencia sua própria memória dinamicamente. Isso elimina a necessidade de alocação/desalocação manual de arrays de caracteres (estilo C), prevenindo vazamentos de memória e erros 
