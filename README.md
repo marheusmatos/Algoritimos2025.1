@@ -81,7 +81,9 @@ Este trabalho tem como objetivo aplicar os quatro pilares da Programação Orien
 ---
 
 ## 👥 Integrantes do Grupo
-- [Preencher com os nomes dos alunos]
+- João Marcelo Pimentel
+- Nathalya Viana
+- Matheus Matos
 
 ---
 
