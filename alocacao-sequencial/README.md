@@ -6,9 +6,9 @@ Este trabalho tem como objetivo aplicar os quatro pilares da Programação Orien
 
 ---
 
-## 🧱 Estruturas Implementadas
+## Estruturas Implementadas
 
-### 📦 Hierarquia de Classes
+###  Hierarquia de Classes
 - **Elemento (abstrata)**  
   - Atributo `id` protegido.  
   - Método `getID()` público.  
@@ -17,7 +17,7 @@ Este trabalho tem como objetivo aplicar os quatro pilares da Programação Orien
 - **Pessoa** e **Produto** (herdam de `Elemento`)  
   - Cada uma implementa `imprimirInfo()` com atributos próprios.
 
-### 📋 Estruturas de Dados com Alocação Sequencial
+###  Estruturas de Dados com Alocação Sequencial
 
 #### 1. Lista Não Ordenada
 - `InserirNoInicio`, `InserirNoFinal`
@@ -39,7 +39,7 @@ Este trabalho tem como objetivo aplicar os quatro pilares da Programação Orien
 
 ---
 
-## 💡 Decisões de Projeto
+##  Decisões de Projeto
 
 - Utilizamos **composição** nas implementações de pilha e fila para maximizar o reuso de código e respeitar o princípio de responsabilidade única.
 - A **busca binária** foi aplicada à `ListaOrdenada` para reduzir a complexidade da busca de O(n) para O(log n).
@@ -48,7 +48,7 @@ Este trabalho tem como objetivo aplicar os quatro pilares da Programação Orien
 
 ---
 
-## 📊 Tabela de Complexidade
+##  Tabela de Complexidade
 
 | Estrutura         | Método              | Complexidade | Observação                        |
 |-------------------|---------------------|--------------|-----------------------------------|
@@ -73,7 +73,7 @@ Este trabalho tem como objetivo aplicar os quatro pilares da Programação Orien
 
 ---
 
-## 🧪 Demonstração no `main.cpp`
+##  Demonstração no `main.cpp`
 - Armazenamento de objetos `Pessoa` e `Produto` em uma lista comum, demonstrando **polimorfismo**.
 - Testes de inserção, remoção e busca por ID em ambas as listas.
 - Demonstração das operações de pilha e fila (versão ingênua e circular).
@@ -81,13 +81,13 @@ Este trabalho tem como objetivo aplicar os quatro pilares da Programação Orien
 ---
 
 ## 👥 Integrantes do Grupo
-- João Marcelo Pimentel
-- Nathalya Viana
 - Matheus Matos
+- João Marcelo Pimentel
+- Nathalya Viana - Contribuiu com o desenvolvimento das estruturas de alocação encadeada. Embora não tenha realizado commits diretos no repositório, trabalhou em conjunto com João Marcelo, que integrou seu código ao projeto final.
 
 ---
 
-## ✅ Compilação
+##  Compilação
 Para compilar:
 
 ```bash

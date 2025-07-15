@@ -5,9 +5,9 @@
 
 int main() {
     ListaNaoOrdenada lista1;
-    lista1.InserirNoFinal(new Pessoa(3, "Alice"));
+    lista1.InserirNoFinal(new Pessoa(3, "Rodrigo"));
     lista1.InserirNoInicio(new Produto(1, "Teclado"));
-    lista1.InserirNoFinal(new Pessoa(2, "Bob"));
+    lista1.InserirNoFinal(new Pessoa(2, "Maria"));
 
     std::cout << "\nLista Não Ordenada:" << std::endl;
     lista1.ImprimirTodos();
@@ -17,7 +17,7 @@ int main() {
     lista1.ImprimirTodos();
 
     ListaOrdenada lista2;
-    lista2.InserirOrdenado(new Pessoa(5, "Joana"));
+    lista2.InserirOrdenado(new Pessoa(5, "João"));
     lista2.InserirOrdenado(new Produto(4, "Mouse"));
     lista2.InserirOrdenado(new Pessoa(6, "Carlos"));
 
